@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Elizabeth - ICS4U0 Portfolio</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="Elizabeth Trykin" />
+
+    <!--  FavIcon  -->
+    <link rel="shortcut icon" href="assets/img/favicon.ico">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Muli:300,400,600" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700" rel="stylesheet">
+
+    <!-- FontAwesome Css -->
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <!-- Line icon Css -->
+    <link rel="stylesheet" href="assets/css/LineIcons.css">
+    <!-- Bootstrap Css -->
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <!-- Owl Carousel Css -->
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <!-- Magnific Popup Css -->
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <!-- Colors Css -->
+    <link rel="stylesheet" href="assets/css/color/green-color.css" id="option-color">
+    <!--  Custom Style CSS  -->
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+
+<body data-spy="scroll" data-target="#scrollspy" data-offset="70" class="flat-demo">
+
+    <!--  Pre Loader  -->
+    <div id="overlayer"></div>
+    <span class="loader"></span>
+
+    <!--    Header Start    -->
+    <header id="header" class="header fixed-top">
+        <nav id="scrollspy" class="navbar navbar-expand-lg header-nav">
+            <div class="container-fluid">
+                <a class="navbar-brand font-weight-bold" href="index.html">Elizabeth <span
+                        class="base-color">Trykin</span></a>
+                <!--  Navbar Toggler Button Start -->
+                <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#toggle-menu"
+                    aria-controls="toggle-menu" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="lni-menu size-md"></span>
+                </button>
+                <!--  Navbar Toggler Button End -->
+                <div class="collapse navbar-collapse" id="toggle-menu">
+                    <ul class="navbar-nav nav-pills ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="colorfull.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="portfolio.html">Portfolio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="sources.html">Sources</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!--    Hero Start    -->
+    <section class="section hero page-hero position-relative pt-5" id="hero">
+        <div class="container page-container">
+            <div class="row pt-5">
+                <div class="col-lg-12">
+                    <div class="title-content">
+                        <!-- <h2 class="base-color">My portfolio</h2> -->
+                    </div>
+                </div>
+            </div>
+            <!-- Breadcrumb -->
+            <div class="row page-title pb-5">
+                <div class="col-12">
+                    <ul class="mb-0 breadcrumb">
+                        <li class="breadcrumb-item">
+                            <a href="colorfull.html">Home</a>
+                        </li>
+                        <li class="breadcrumb-item">
+                            <a href="portfolio.html">Portfolio</a>
+                        </li>
+                        <li class="breadcrumb-item">Arrays</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Start -->
+    <section id="portfolio" class="section portfolio py-5">
+        <div class="container">
+            <div class="row portfolio-single">
+                <div class="col-lg-12 mx-auto">
+                    <div class="text-left">
+                        <h1 class="mb-4 h4">Arrays</h1>
+                    </div>
+                    <div class="entry-content box-border mt-4 col-lg-12 p-3 ml-10">
+                        <div class="text-center">
+                            <div>
+                                <h6>Concept Theory</h6>
+                            </div>
+                        </div>
+                        <div class="text-left mt-4 mb-4 mr-4 ml-4">
+                            <p>Arrays are used for storing a certain number of elements of the same data type.
+                                They are most useful for storing variables that corrolate with one another, so
+                                that they can be easily accessed. For example, I could store student names in an
+                                array.
+                            </p>
+                            <div>
+                                <h6 class="base-color mb-0">How to declare an array</h6>
+                            </div>
+                            <ul class="mt-4 checkmark-list mb-0">
+                                <li class="mb-2">
+                                    <span>Declaring an array - String [] arr = new String[n]; (where n is the
+                                        size of
+                                        the
+                                        array)</span>
+                                </li>
+                                <li class="mb-2">
+                                    <span>Initializing an array - String [] arr = new String{"Grace", "George",
+                                        "Athena"};</span>
+                                </li>
+                                <li class="mb-2">
+                                    <span>Accessing an index of an array - System.out.println(arr[0]); (would
+                                        print
+                                        Grace);</span>
+                                </li>
+                                <li class="mb-2">
+                                    <span>Printing out an entire array:</span>
+                                </li>
+                            </ul>
+                            <div class="ml-4 mb-0">
+                                <p>for (int i = 0; i &lt 3; i++) {</p>
+                            </div>
+                            <div class="ml-4 mt-0">
+                                <p>System.out.println(arr[i]); }</p>
+                            </div>
+                            <div>
+                                <h6 class="base-color mb-0">Common errors when using arrays</h6>
+                            </div>
+                            <ul class="mt-4 checkmark-list mb-0">
+                                <!-- Item-01 -->
+                                <li class="mb-2">
+                                    <span>ArrayIndexOutOfBounds - When for loop, if the loop increments beyond the last
+                                        index of the array (length - 1), the program will crash.</span>
+                                </li>
+                                <!-- Item-02 -->
+                                <li class="mb-2">
+                                    <span>Off-By-One - We naturally start counting at 1, by array indexes start at 0,
+                                        which means that in a loop, the index would start at 0.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="entry-content box-border mt-4 col-lg-12 p-3 ml-10">
+                    <div class="text-center mt-4">
+                        <div>
+                            <h6>Code example</h6>
+                            <p>Code included was made in collaboration with Serena Bessette</p>
+                        </div>
+                    </div>
+                    <div class="text-left mt-4 mb-4 mr-4 ml-4">
+                        <p>In the first step below, I declared and assigned sizes to 5 parallel arrays. This
+                            means that cat 1 would be at index 0 for all 5 arrays.</p>
+                        <div class="mt-4 mb-4">
+                            <div class="portfolio-single-item image-border">
+                                <img src="assets/img/Arrays-image1.jpg" class="d-block" alt="...">
+                            </div>
+                        </div>
+                        <p>The purpose of this program was to use parallel arrays and compare cats, by different
+                            factors such as colour, breed, affection etc.</p>
+                        <p>In the first step above, I declared and assigned sizes to 5 parallel arrays. This means
+                            that
+                            cat 1 would be at index 0 for all 5 arrays.</p>
+                        <div class="mt-4 mb-4">
+                            <div class="portfolio-single-item image-border">
+                                <img src="assets/img/Arrays-image2.jpg" class="d-block" alt="...">
+                            </div>
+                        </div>
+                        <p>The intention behind the display best method was for the program to look through and
+                            compare all 5 cats, to find the one with the highest score. I created a maxScore
+                            variable and a currentScore variable, and the if statement would change maxScore to
+                            equal currentScore if it's value was larger.</p>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <!--  Portfolio End  -->
+
+    <!--   Return To Top  -->
+    <a class="return-to-top text-white bg-base-color d-inline-block" href="javascript:void(0)"><i
+            class="lni-arrow-up"></i></a>
+
+    <!--  JavaScripts  -->
+    <script src="assets/js/jquery-3.4.1.min.js"></script>
+    <!--  Bootstrap Js  -->
+    <script src="assets/js/bootstrap.js"></script>
+    <!--  Easing Js  -->
+    <script src="assets/js/jquery.easing.min.js"></script>
+    <!--  Typed Js  -->
+    <script src="assets/js/typed.js"></script>
+    <!--  Count to Js  -->
+    <script src="assets/js/jquery.countTo.js"></script>
+    <!--  Magnific Popup Js  -->
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <!--  Isotope Js  -->
+    <script src="assets/js/isotope.pkgd.min.js"></script>
+    <!--  Owl Carousel Js  -->
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <!--  Particle Js  -->
+    <script src="assets/js/particles-01.min.js"></script>
+    <!--  particles app Js  -->
+    <script src="assets/js/particles-01.app.js"></script>
+    <!-- Map Js -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDRemITiP7JRWpZwLhVt-T2x5MeUFE2KWs"></script>
+    <!--  Custom JS  -->
+    <script src="assets/js/Elizabeth.js"></script>
+
+</body>
+
+</html>

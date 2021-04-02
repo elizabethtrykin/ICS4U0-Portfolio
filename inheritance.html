@@ -109,90 +109,63 @@
                             </div>
                         </div>
                         <div class="text-left mt-4 mb-4 mr-4 ml-4">
-                            <p>Arrays are used for storing a certain number of elements of the same data type.
-                                They are most useful for storing variables that corrolate with one another, so
-                                that they can be easily accessed. For example, I could store student names in an
-                                array.
+                            <p>Inheritance allows one class can inheret (very similar to real world inheritance) the
+                                attributes and behaviours of another class.
                             </p>
                             <div>
-                                <h6 class="base-color mb-0">How to declare an array</h6>
+                                <h6 class="base-color mb-0">The Superclass</h6>
                             </div>
-                            <ul class="mt-4 checkmark-list mb-0">
-                                <li class="mb-2">
-                                    <span>Declaring an array - String [] arr = new String[n]; (where n is the
-                                        size of
-                                        the
-                                        array)</span>
-                                </li>
-                                <li class="mb-2">
-                                    <span>Initializing an array - String [] arr = new String{"Grace", "George",
-                                        "Athena"};</span>
-                                </li>
-                                <li class="mb-2">
-                                    <span>Accessing an index of an array - System.out.println(arr[0]); (would
-                                        print
-                                        Grace);</span>
-                                </li>
-                                <li class="mb-2">
-                                    <span>Printing out an entire array:</span>
-                                </li>
-                            </ul>
-                            <div class="ml-4 mb-0">
-                                <p>for (int i = 0; i &lt 3; i++) {</p>
-                            </div>
-                            <div class="ml-4 mt-0">
-                                <p>System.out.println(arr[i]); }</p>
+                            <p>The super class is the main class, from which the other class(es) will extend. This is
+                                just a regular class, to learn more about that go back to Intro to OOP in my portfolio.
+                                Here is an example of a person class in a fairytale.</p>
+                            <div class="mt-4 mb-4">
+                                <div class="portfolio-single-item image-border">
+                                    <img src="assets/img/inheritance-01.png" class="d-block" alt="...">
+                                </div>
                             </div>
                             <div>
-                                <h6 class="base-color mb-0">Common errors when using arrays</h6>
+                                <h6 class="base-color mb-0">The Subclass</h6>
                             </div>
-                            <ul class="mt-4 checkmark-list mb-0">
-                                <!-- Item-01 -->
-                                <li class="mb-2">
-                                    <span>ArrayIndexOutOfBounds - When for loop, if the loop increments beyond the last
-                                        index of the array (length - 1), the program will crash.</span>
-                                </li>
-                                <!-- Item-02 -->
-                                <li class="mb-2">
-                                    <span>Off-By-One - We naturally start counting at 1, by array indexes start at 0,
-                                        which means that in a loop, the index would start at 0.</span>
-                                </li>
-                            </ul>
+                            <p>The subclass extends the superclass, and the syntax at the top literally says "EvilWitch
+                                extends Person". In the constructor, I called the super(); keyword to call the super
+                                constructor. However, I also added on several other attributes to the witch, since this
+                                character contiains person and witch attributes. On the other hand, not all withches are
+                                person, so not all characters will have these attributes.</p>
+                            <div class="mt-4 mb-4">
+                                <div class="portfolio-single-item image-border">
+                                    <img src="assets/img/inheritance-02.png" class="d-block" alt="...">
+                                </div>
+                            </div>
+                            <div>
+                                <h6 class="base-color mb-0">Creating objects with inheritance</h6>
+                            </div>
+                            <p>Take a look at the comments in the code below, to see what works and what doesn't when
+                                creating objects with inheritance.</p>
+                            <div class="mt-4 mb-4">
+                                <div class="portfolio-single-item image-border">
+                                    <img src="assets/img/inheritance-03.png" class="d-block" alt="...">
+                                </div>
+                            </div>
+                            <div>
+                                <h6 class="base-color mb-0">Polymorphism</h6>
+                            </div>
+                            <p>Polymorphism explains that there is a differnce between compile time and run time. During
+                                compile time, when an object is created, the program will look at the type of the object
+                                on the left. So in the case below, it will consider he as person. However, it also sees
+                                that I'm trying to call the method cackle();. So, at compile time, Java looks for the
+                                method cackle(); in Person, but does not find it and throws a compile time error</p>
+                            <div class="mt-4 mb-4">
+                                <div class="portfolio-single-item image-border">
+                                    <img src="assets/img/inheritance-04.png" class="d-block" alt="...">
+                                </div>
+                            </div>
+                            <p>Now if the code passes through compile time, the program will then run, and only now
+                                check if the subclass has the method cackle();. So, if you create a superclass type, but
+                                declare as a subclass and then running methods, make sure that the superclass also
+                                contains the method. </p>
                         </div>
                     </div>
                 </div>
-                <div class="entry-content box-border mt-4 col-lg-12 p-3 ml-10">
-                    <div class="text-center mt-4">
-                        <div>
-                            <h6>Code example</h6>
-                            <p>Code included was made in collaboration with Serena Bessette</p>
-                        </div>
-                    </div>
-                    <div class="text-left mt-4 mb-4 mr-4 ml-4">
-                        <p>In the first step below, I declared and assigned sizes to 5 parallel arrays. This
-                            means that cat 1 would be at index 0 for all 5 arrays.</p>
-                        <div class="mt-4 mb-4">
-                            <div class="portfolio-single-item image-border">
-                                <img src="assets/img/Arrays-image1.jpg" class="d-block" alt="...">
-                            </div>
-                        </div>
-                        <p>The purpose of this program was to use parallel arrays and compare cats, by different
-                            factors such as colour, breed, affection etc.</p>
-                        <p>In the first step above, I declared and assigned sizes to 5 parallel arrays. This means
-                            that
-                            cat 1 would be at index 0 for all 5 arrays.</p>
-                        <div class="mt-4 mb-4">
-                            <div class="portfolio-single-item image-border">
-                                <img src="assets/img/Arrays-image2.jpg" class="d-block" alt="...">
-                            </div>
-                        </div>
-                        <p>The intention behind the display best method was for the program to look through and
-                            compare all 5 cats, to find the one with the highest score. I created a maxScore
-                            variable and a currentScore variable, and the if statement would change maxScore to
-                            equal currentScore if it's value was larger.</p>
-                    </div>
-                </div>
-            </div>
     </section>
     <!--  Portfolio End  -->
 

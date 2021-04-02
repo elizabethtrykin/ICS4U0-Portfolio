@@ -100,7 +100,7 @@
             <div class="row portfolio-single">
                 <div class="col-lg-12 mx-auto">
                     <div class="text-left">
-                        <h1 class="mb-4 h4">Arrays</h1>
+                        <h1 class="mb-4 h4">2D Arrays</h1>
                     </div>
                     <div class="entry-content box-border mt-4 col-lg-12 p-3 ml-10">
                         <div class="text-center">
@@ -109,39 +109,41 @@
                             </div>
                         </div>
                         <div class="text-left mt-4 mb-4 mr-4 ml-4">
-                            <p>Arrays are used for storing a certain number of elements of the same data type.
-                                They are most useful for storing variables that corrolate with one another, so
-                                that they can be easily accessed. For example, I could store student names in an
-                                array.
+                            <p> 2D Arrays is just an array of arrays. In regular arrays, elements are referred to by one
+                                index. Whereas in 2D arrays, they're referred to using two indices. 2D arrays are very
+                                similar to grids.
                             </p>
                             <div>
-                                <h6 class="base-color mb-0">How to declare an array</h6>
+                                <h6 class="base-color mb-0">How to use a 2D array</h6>
                             </div>
                             <ul class="mt-4 checkmark-list mb-0">
                                 <li class="mb-2">
-                                    <span>Declaring an array - String [] arr = new String[n]; (where n is the
-                                        size of
-                                        the
-                                        array)</span>
+                                    <span>Declaring an array - int[][] arr = new int[r][c]; (where r is the
+                                        number of rows & c is the number of columns)</span>
                                 </li>
                                 <li class="mb-2">
-                                    <span>Initializing an array - String [] arr = new String{"Grace", "George",
-                                        "Athena"};</span>
+                                    <span>Initializing an array - String [] arr = new String{{1, 2, 3},{4, 5,
+                                        6}};</span>
                                 </li>
                                 <li class="mb-2">
-                                    <span>Accessing an index of an array - System.out.println(arr[0]); (would
-                                        print
-                                        Grace);</span>
+                                    <span>Accessing an index of an array - System.out.println(arr[0][0]); (would
+                                        print 1);</span>
                                 </li>
                                 <li class="mb-2">
-                                    <span>Printing out an entire array:</span>
+                                    <span>Length of an array - rows: arr.length; columns: arr[0].length;</span>
+                                </li>
+                                <li class="mb-2">
+                                    <span>Printing out an entire 2D array:</span>
                                 </li>
                             </ul>
                             <div class="ml-4 mb-0">
-                                <p>for (int i = 0; i &lt 3; i++) {</p>
+                                <p>for (int i = 0; i &lt 2; i++) {</p>
+                            </div>
+                            <div class="ml-4 mb-0">
+                                <p>for (int j = 0; j &lt 3; j++) {</p>
                             </div>
                             <div class="ml-4 mt-0">
-                                <p>System.out.println(arr[i]); }</p>
+                                <p>System.out.println(arr[i][j]);}}</p>
                             </div>
                             <div>
                                 <h6 class="base-color mb-0">Common errors when using arrays</h6>
@@ -149,13 +151,13 @@
                             <ul class="mt-4 checkmark-list mb-0">
                                 <!-- Item-01 -->
                                 <li class="mb-2">
-                                    <span>ArrayIndexOutOfBounds - When for loop, if the loop increments beyond the last
-                                        index of the array (length - 1), the program will crash.</span>
+                                    <span>ArrayIndexOutOfBounds - If a for loop increments past the final index of an
+                                        array (length-1), it will crash. </span>
                                 </li>
                                 <!-- Item-02 -->
                                 <li class="mb-2">
-                                    <span>Off-By-One - We naturally start counting at 1, by array indexes start at 0,
-                                        which means that in a loop, the index would start at 0.</span>
+                                    <span>Off-By-One - We naturally start counting at 1, but the first index of an array
+                                        is 0.</span>
                                 </li>
                             </ul>
                         </div>
@@ -169,27 +171,27 @@
                         </div>
                     </div>
                     <div class="text-left mt-4 mb-4 mr-4 ml-4">
-                        <p>In the first step below, I declared and assigned sizes to 5 parallel arrays. This
-                            means that cat 1 would be at index 0 for all 5 arrays.</p>
+                        <p>The purpose of this program was to use a 2d arrays to store 6 values for cats: total score,
+                            name, colour score, breed score, affection score and discipline score. </p>
+                        <p>We made a 2D String array that stores all the values, and when comparing used
+                            Integer.parseInt to convert the values into integers. The program then uses a for loop to
+                            determine the maximum score and the cat it belongs to.</p>
+                        <p>In the first step below, I declared a 2D array of 5 rows and 6 columns, since there are 5
+                            cats and 6 different values per cat.</p>
                         <div class="mt-4 mb-4">
                             <div class="portfolio-single-item image-border">
-                                <img src="assets/img/Arrays-image1.jpg" class="d-block" alt="...">
+                                <img src="assets/img/2darrays-01.jpg" class="d-block" alt="...">
                             </div>
                         </div>
-                        <p>The purpose of this program was to use parallel arrays and compare cats, by different
-                            factors such as colour, breed, affection etc.</p>
-                        <p>In the first step above, I declared and assigned sizes to 5 parallel arrays. This means
-                            that
-                            cat 1 would be at index 0 for all 5 arrays.</p>
+                        <p>The intention behind the displayBest method below was for the program to look through and
+                            compare all 5 cats, to find the one with the highest score. I created a maxRate
+                            variable and a rowRate variable, and the if statement would change maxRate to
+                            equal rowRate if it's value was greater.</p>
                         <div class="mt-4 mb-4">
                             <div class="portfolio-single-item image-border">
-                                <img src="assets/img/Arrays-image2.jpg" class="d-block" alt="...">
+                                <img src="assets/img/2darrays-02.jpg" class="d-block" alt="...">
                             </div>
                         </div>
-                        <p>The intention behind the display best method was for the program to look through and
-                            compare all 5 cats, to find the one with the highest score. I created a maxScore
-                            variable and a currentScore variable, and the if statement would change maxScore to
-                            equal currentScore if it's value was larger.</p>
                     </div>
                 </div>
             </div>

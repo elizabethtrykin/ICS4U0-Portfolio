@@ -87,7 +87,7 @@
                         <li class="breadcrumb-item">
                             <a href="portfolio.html">Portfolio</a>
                         </li>
-                        <li class="breadcrumb-item">Arrays</li>
+                        <li class="breadcrumb-item">Arraylists</li>
                     </ul>
                 </div>
             </div>
@@ -100,7 +100,7 @@
             <div class="row portfolio-single">
                 <div class="col-lg-12 mx-auto">
                     <div class="text-left">
-                        <h1 class="mb-4 h4">2D Arrays</h1>
+                        <h1 class="mb-4 h4">Arraylists</h1>
                     </div>
                     <div class="entry-content box-border mt-4 col-lg-12 p-3 ml-10">
                         <div class="text-center">
@@ -109,54 +109,82 @@
                             </div>
                         </div>
                         <div class="text-left mt-4 mb-4 mr-4 ml-4">
-                            <p> 2D Arrays is just an array of arrays. In regular arrays, elements are referred to by one
-                                index. Whereas in 2D arrays, they're referred to using two indices. 2D arrays are very
-                                similar to grids.
+                            <p> Arraylists are very similar to arrays, except are resizable and therefore, a little
+                                easier to use in practice. However, Java can only story objects (including Strings) in
+                                arraylists, so primitive data types such as ints and floats can not be stored.
+                                Here are some of the functions of an arraylist:
                             </p>
                             <div>
-                                <h6 class="base-color mb-0">How to use a 2D array</h6>
+                                <h6 class="base-color mb-0">Declaring an arraylist without values</h6>
                             </div>
-                            <ul class="mt-4 checkmark-list mb-0">
-                                <li class="mb-2">
-                                    <span>Declaring an array - int[][] arr = new int[r][c]; (where r is the
-                                        number of rows & c is the number of columns)</span>
-                                </li>
-                                <li class="mb-2">
-                                    <span>Initializing an array - String [] arr = new String{{1, 2, 3},{4, 5,
-                                        6}};</span>
-                                </li>
-                                <li class="mb-2">
-                                    <span>Accessing an index of an array - System.out.println(arr[0][0]); (would
-                                        print 1);</span>
-                                </li>
-                                <li class="mb-2">
-                                    <span>Length of an array - rows: arr.length; columns: arr[0].length;</span>
-                                </li>
-                                <li class="mb-2">
-                                    <span>Printing out an entire 2D array:</span>
-                                </li>
-                            </ul>
-                            <div class="ml-4 mb-0">
-                                <p>for (int i = 0; i &lt 2; i++) {</p>
-                            </div>
-                            <div class="ml-4 mb-0">
-                                <p>for (int j = 0; j &lt 3; j++) {</p>
-                            </div>
-                            <div class="ml-4 mt-0">
-                                <p>System.out.println(arr[i][j]);}}</p>
-                            </div>
+                            <p> ArrayList<String> names = new ArrayList<String>();
+                            </p>
+                            <p> This creates a new string arraylist called names.
+                            </p>
+
                             <div>
-                                <h6 class="base-color mb-0">Common errors when using arrays</h6>
+                                <h6 class="base-color mb-0">Declaring an arrraylist with values</h6>
+                            </div>
+                            <p> .List<String> names = Arrays.asList( "Julie", "George"); method adds whatever is in the
+                                    brackets to the ned of the array.
+                            </p>
+                            <p> This creates a new string arrayList with names Julie and George.
+                            </p>
+
+                            <div>
+                                <h6 class="base-color mb-0">Adding values to the list</h6>
+                            </div>
+                            <p> .add(); method adds whatever is in the brackets to the ned of the array.
+                            </p>
+                            <p> names.add("Henry"); --> will add Henry to the end of the array
+                            </p>
+
+                            <div>
+                                <h6 class="base-color mb-0">Accessing a value</h6>
+                            </div>
+                            <p> .get(n); where n is the index of the value.
+                            </p>
+                            <p> System.out.println(names.get(0)); --> will print Julie
+                            </p>
+
+                            <div>
+                                <h6 class="base-color mb-0">Removing values</h6>
+                            </div>
+                            <p> .remove(n); where n is the index of the value being removed
+                            </p>
+                            <p> names.remove(0); --> will remove Julie
+                            </p>
+                            <p> .clear --> will remove all contents from the array
+                            </p>
+
+                            <div>
+                                <h6 class="base-color mb-0">Length of the list</h6>
+                            </div>
+                            <p> .size(); will give the lenght of the arraylist
+                            </p>
+                            <p> System.out.println(names.size()); --> will print 3
+                            </p>
+
+                            <div>
+                                <h6 class="base-color mb-0">Looping through an arraylist using enhanced for loops</h6>
+                            </div>
+                            <p> for (int name: names) {</p>
+                            <p> System.out.println(name); }</p>
+                            <p> This for each loop will print out the names in the name array one by one.
+                            </p>
+                            <div>
+                                <h6 class="base-color mb-0">Common errors when using arraylists</h6>
                             </div>
                             <ul class="mt-4 checkmark-list mb-0">
                                 <!-- Item-01 -->
                                 <li class="mb-2">
                                     <span>ArrayIndexOutOfBounds - If a for loop increments past the final index of an
-                                        array (length-1), it will crash. </span>
+                                        arraylist (length-1), it will crash. </span>
                                 </li>
                                 <!-- Item-02 -->
                                 <li class="mb-2">
-                                    <span>Off-By-One - We naturally start counting at 1, but the first index of an array
+                                    <span>Off-By-One - We naturally start counting at 1, but the first index of an
+                                        arraylist
                                         is 0.</span>
                                 </li>
                             </ul>
@@ -171,25 +199,26 @@
                         </div>
                     </div>
                     <div class="text-left mt-4 mb-4 mr-4 ml-4">
-                        <p>The purpose of this program was to use a 2d arrays to store 6 values for cats: total score,
-                            name, colour score, breed score, affection score and discipline score. </p>
-                        <p>We made a 2D String array that stores all the values, and when comparing used
-                            Integer.parseInt to convert the values into integers. The program then uses a for loop to
-                            determine the maximum score and the cat it belongs to.</p>
-                        <p>In the first step below, I declared a 2D array of 5 rows and 6 columns, since there are 5
-                            cats and 6 different values per cat.</p>
+                        <p>This program models a card game called Bridge, where each of the four players
+                            is dealt thirteen cards. Each card has a numerical value, and the player with the highest
+                            total wins the game.</p>
+                        <p>There were several methods in our program:</p>
+                        <p>dealDeck --> This method uses 5 arrays (1 per player and 1 for the deck of cards) and a regular for loop to assign each player 13 cards. This method uses the .add(); and the .clear(); arraylist functions.</p>
                         <div class="mt-4 mb-4">
                             <div class="portfolio-single-item image-border">
-                                <img src="assets/img/2darrays-01.jpg" class="d-block" alt="...">
+                                <img src="assets/img/arraylists-01.png" class="d-block" alt="...">
                             </div>
                         </div>
-                        <p>The intention behind the displayBest method below was for the program to look through and
-                            compare all 5 cats, to find the one with the highest score. I created a maxRate
-                            variable and a rowRate variable, and the if statement would change maxRate to
-                            equal rowRate if it's value was greater.</p>
+                        <p>evaluateHand(ArrayList<String> hand) --> contains several if statements that calculate the
+                                total of a certain person, depending on their cards. </p>
+                        <p>displayHand(ArrayList<Integer> points, ArrayList<String> pHand, int pNum) --> displays a
+                                    players cards in rows, with their total points</p>
+                        <p>declareWinner --> (shown below) uses enhanced for loops and a
+                                arraylist argument, to go through all of the players' points and determine the top
+                                player.</p>
                         <div class="mt-4 mb-4">
                             <div class="portfolio-single-item image-border">
-                                <img src="assets/img/2darrays-02.jpg" class="d-block" alt="...">
+                                <img src="assets/img/arraylists-02.png" class="d-block" alt="...">
                             </div>
                         </div>
                     </div>

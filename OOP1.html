@@ -87,7 +87,7 @@
                         <li class="breadcrumb-item">
                             <a href="portfolio.html">Portfolio</a>
                         </li>
-                        <li class="breadcrumb-item">Arrays</li>
+                        <li class="breadcrumb-item">OOP Introduction</li>
                     </ul>
                 </div>
             </div>
@@ -100,7 +100,7 @@
             <div class="row portfolio-single">
                 <div class="col-lg-12 mx-auto">
                     <div class="text-left">
-                        <h1 class="mb-4 h4">Arrays</h1>
+                        <h1 class="mb-4 h4">Object Oriented Programming Introduction</h1>
                     </div>
                     <div class="entry-content box-border mt-4 col-lg-12 p-3 ml-10">
                         <div class="text-center">
@@ -109,87 +109,71 @@
                             </div>
                         </div>
                         <div class="text-left mt-4 mb-4 mr-4 ml-4">
-                            <p>Arrays are used for storing a certain number of elements of the same data type.
-                                They are most useful for storing variables that corrolate with one another, so
-                                that they can be easily accessed. For example, I could store student names in an
-                                array.
+                            <p>OOP is programming that is based on real world, where we have objects. For example, I
+                                could create a
+                                dog object that has several different attributes and behaviours, which is modeled by
+                                OOP.
                             </p>
-                            <div>
-                                <h6 class="base-color mb-0">How to declare an array</h6>
+                            <p>Class - A template for the creation of objects.
+                            </p>
+                            <p>Object - A specific object of this class. For example, I can have a people class, but
+                                only one instance of you. I would then create an *insert your name here* object of the
+                                human class.
+                            </p>
+                            <p>Attributes - Similar to the real world, objects can have attributes that describe them.
+                                For example, a student has a name, a certain mark and an average. We can model these
+                                attributes through the use of instance variables.</p>
+                            <div class="mt-4 mb-4">
+                                <div class="portfolio-single-item image-border">
+                                    <img src="assets/img/OOP1-01.png" class="d-block" alt="...">
+                                </div>
                             </div>
-                            <ul class="mt-4 checkmark-list mb-0">
-                                <li class="mb-2">
-                                    <span>Declaring an array - String [] arr = new String[n]; (where n is the
-                                        size of
-                                        the
-                                        array)</span>
-                                </li>
-                                <li class="mb-2">
-                                    <span>Initializing an array - String [] arr = new String{"Grace", "George",
-                                        "Athena"};</span>
-                                </li>
-                                <li class="mb-2">
-                                    <span>Accessing an index of an array - System.out.println(arr[0]); (would
-                                        print
-                                        Grace);</span>
-                                </li>
-                                <li class="mb-2">
-                                    <span>Printing out an entire array:</span>
-                                </li>
+
+                            <p>Behaviours - Objects can also have behaviours, for example my dog has the ability to bark
+                                or eat, which can be modeled through the use of methods. In the case below, the student
+                                has the ability to have their marks set. </p>
+                            <div class="mt-4 mb-4">
+                                <div class="portfolio-single-item image-border">
+                                    <img src="assets/img/OOP1-02.png" class="d-block" alt="...">
+                                </div>
+                            </div>
+
+                            <p>Constructors - This is what creates the default values for the student, that can later be
+                                changed using the methods in the program.</p>
+                            <div class="mt-4 mb-4">
+                                <div class="portfolio-single-item image-border">
+                                    <img src="assets/img/OOP1-03.png" class="d-block" alt="...">
+                                </div>
+                            </div>
+
+                            <p>Creating objects - In the main program, I then create the objects. In this example, I
+                                have created an array of student objects, and created 5 students named Jack, Liam,
+                                Avery, Evan and Sonia. </p>
+                            <div class="mt-4 mb-4">
+                                <div class="portfolio-single-item image-border">
+                                    <img src="assets/img/OOP1-04.png" class="d-block" alt="...">
+                                </div>
+                            </div>
+
+                            <p>Constructors with parameters - When creatings objects, I can also assign the attribute
+                                values right then and there. In order for this to happen, there needs to be a second
+                                cunstructor that accepts parameters and assigns the parameters to the
+                                variables/attributes.</p>
+                            <div class="mt-4 mb-4">
+                                <div class="portfolio-single-item image-border">
+                                    <img src="assets/img/OOP1-05.png" class="d-block" alt="...">
+                                </div>
+                            </div>
+                            <p>Objects with parameters - In the main method of the program, when creating a new object,
+                                I've added the string "Loki" and the weight 3.6. The program reads that, and inputs
+                                those values into the constructor.</p>
+                            <div class="mt-4 mb-4">
+                                <div class="portfolio-single-item image-border">
+                                    <img src="assets/img/OOP1-06.png" class="d-block" alt="...">
+                                </div>
+                            </div>
                             </ul>
-                            <div class="ml-4 mb-0">
-                                <p>for (int i = 0; i &lt 3; i++) {</p>
-                            </div>
-                            <div class="ml-4 mt-0">
-                                <p>System.out.println(arr[i]); }</p>
-                            </div>
-                            <div>
-                                <h6 class="base-color mb-0">Common errors when using arrays</h6>
-                            </div>
-                            <ul class="mt-4 checkmark-list mb-0">
-                                <!-- Item-01 -->
-                                <li class="mb-2">
-                                    <span>ArrayIndexOutOfBounds - When for loop, if the loop increments beyond the last
-                                        index of the array (length - 1), the program will crash.</span>
-                                </li>
-                                <!-- Item-02 -->
-                                <li class="mb-2">
-                                    <span>Off-By-One - We naturally start counting at 1, by array indexes start at 0,
-                                        which means that in a loop, the index would start at 0.</span>
-                                </li>
-                            </ul>
                         </div>
-                    </div>
-                </div>
-                <div class="entry-content box-border mt-4 col-lg-12 p-3 ml-10">
-                    <div class="text-center mt-4">
-                        <div>
-                            <h6>Code example</h6>
-                            <p>Code included was made in collaboration with Serena Bessette</p>
-                        </div>
-                    </div>
-                    <div class="text-left mt-4 mb-4 mr-4 ml-4">
-                        <p>In the first step below, I declared and assigned sizes to 5 parallel arrays. This
-                            means that cat 1 would be at index 0 for all 5 arrays.</p>
-                        <div class="mt-4 mb-4">
-                            <div class="portfolio-single-item image-border">
-                                <img src="assets/img/Arrays-image1.jpg" class="d-block" alt="...">
-                            </div>
-                        </div>
-                        <p>The purpose of this program was to use parallel arrays and compare cats, by different
-                            factors such as colour, breed, affection etc.</p>
-                        <p>In the first step above, I declared and assigned sizes to 5 parallel arrays. This means
-                            that
-                            cat 1 would be at index 0 for all 5 arrays.</p>
-                        <div class="mt-4 mb-4">
-                            <div class="portfolio-single-item image-border">
-                                <img src="assets/img/Arrays-image2.jpg" class="d-block" alt="...">
-                            </div>
-                        </div>
-                        <p>The intention behind the display best method was for the program to look through and
-                            compare all 5 cats, to find the one with the highest score. I created a maxScore
-                            variable and a currentScore variable, and the if statement would change maxScore to
-                            equal currentScore if it's value was larger.</p>
                     </div>
                 </div>
             </div>

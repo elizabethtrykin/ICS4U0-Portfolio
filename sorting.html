@@ -87,12 +87,13 @@
                         <li class="breadcrumb-item">
                             <a href="portfolio.html">Portfolio</a>
                         </li>
-                        <li class="breadcrumb-item">Arrays</li>
+                        <li class="breadcrumb-item">Sorting</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
+
 
     <!-- Portfolio Start -->
     <section id="portfolio" class="section portfolio py-5">
@@ -100,7 +101,7 @@
             <div class="row portfolio-single">
                 <div class="col-lg-12 mx-auto">
                     <div class="text-left">
-                        <h1 class="mb-4 h4">Arrays</h1>
+                        <h1 class="mb-4 h4">Sorting</h1>
                     </div>
                     <div class="entry-content box-border mt-4 col-lg-12 p-3 ml-10">
                         <div class="text-center">
@@ -109,53 +110,59 @@
                             </div>
                         </div>
                         <div class="text-left mt-4 mb-4 mr-4 ml-4">
-                            <p>Arrays are used for storing a certain number of elements of the same data type.
-                                They are most useful for storing variables that corrolate with one another, so
-                                that they can be easily accessed. For example, I could store student names in an
-                                array.
+                            <p> Sorting is used to sort arrays of values from least to greatest, or vice versa or in
+                                alphabetical order. There are many different sorting alogirthms, and I'll outline some
+                                of them here.
                             </p>
                             <div>
-                                <h6 class="base-color mb-0">How to declare an array</h6>
+                                <h6 class="base-color mb-0">Bubble sort</h6>
                             </div>
-                            <ul class="mt-4 checkmark-list mb-0">
-                                <li class="mb-2">
-                                    <span>Declaring an array - String [] arr = new String[n]; (where n is the
-                                        size of
-                                        the
-                                        array)</span>
-                                </li>
-                                <li class="mb-2">
-                                    <span>Initializing an array - String [] arr = new String{"Grace", "George",
-                                        "Athena"};</span>
-                                </li>
-                                <li class="mb-2">
-                                    <span>Accessing an index of an array - System.out.println(arr[0]); (would
-                                        print
-                                        Grace);</span>
-                                </li>
-                                <li class="mb-2">
-                                    <span>Printing out an entire array:</span>
-                                </li>
-                            </ul>
-                            <div class="ml-4 mb-0">
-                                <p>for (int i = 0; i &lt 3; i++) {</p>
-                            </div>
-                            <div class="ml-4 mt-0">
-                                <p>System.out.println(arr[i]); }</p>
-                            </div>
+                            <p> Works by swapping consequent values if they're not in the corect order. The loop wil
+                                start at the very beginning of the array, and go through every element, swapping them
+                                into the correct order.
+                            </p>
                             <div>
-                                <h6 class="base-color mb-0">Common errors when using arrays</h6>
+                                <h6 class="base-color mb-0">Insertion sort</h6>
+                            </div>
+                            <p> Works by splitting the array into sorted (starting the first element on the left) and
+                                unsorted (elements on the right). The loop starts with the leftmost element, which
+                                should either be the greatest or the smallest and compares every element on the right to
+                                that element. It will do so until there needs to be a swap.
+                            </p>
+                            <div>
+                                <h6 class="base-color mb-0">Selection sort</h6>
+                            </div>
+                            <p> This sorting method will look for the minimum/maximum value in the array, and add it to
+                                the left. It will do so until the entire array is sorted from least to greatest or vice
+                                versa.
+                            </p>
+                            <div>
+                                <h6 class="base-color mb-0">Quicksort</h6>
+                            </div>
+                            <p> Works by picking a random element in the array, and adds all the smaller values to the
+                                left, then all the larger values to the right. It then, does so with every single value
+                                until the array is sorted.
+                            </p>
+                            <div>
+                                <h6 class="base-color mb-0">Quicksort</h6>
+                            </div>
+                            <p> Works by picking a random element in the array, and adds all the smaller values to the
+                                left, then all the larger values to the right. It then, does so with every single value
+                                until the array is sorted.
+                            </p>
+                            <div>
+                                <h6 class="base-color mb-0">Common errors when sorting through arrays:</h6>
                             </div>
                             <ul class="mt-4 checkmark-list mb-0">
                                 <!-- Item-01 -->
                                 <li class="mb-2">
-                                    <span>ArrayIndexOutOfBounds - When for loop, if the loop increments beyond the last
-                                        index of the array (length - 1), the program will crash.</span>
+                                    <span>ArrayIndexOutOfBounds - If a for loop increments past the final index of an
+                                        array (length-1), it will crash. </span>
                                 </li>
                                 <!-- Item-02 -->
                                 <li class="mb-2">
-                                    <span>Off-By-One - We naturally start counting at 1, by array indexes start at 0,
-                                        which means that in a loop, the index would start at 0.</span>
+                                    <span>Off-By-One - We naturally start counting at 1, but the first index of an array
+                                        is 0.</span>
                                 </li>
                             </ul>
                         </div>
@@ -165,31 +172,61 @@
                     <div class="text-center mt-4">
                         <div>
                             <h6>Code example</h6>
-                            <p>Code included was made in collaboration with Serena Bessette</p>
                         </div>
                     </div>
                     <div class="text-left mt-4 mb-4 mr-4 ml-4">
-                        <p>In the first step below, I declared and assigned sizes to 5 parallel arrays. This
-                            means that cat 1 would be at index 0 for all 5 arrays.</p>
+                        <p>The purpose of this program was to sort a text file of countries with 4 datapoints from least
+                            to greatest according to population. An example of a line in the file is: Afghanistan Kabul
+                            250,000 31,056,997.</p>
+                        <p>There were a couple challenges to this project:</p>
+                        <ul class="mt-4 checkmark-list mb-0">
+                            <!-- Item-01 -->
+                            <li class="mb-2">
+                                <span>Many of the countries and capitals consist of several words --> I created an array
+                                    with multiwork country names and organized those separately. </span>
+                            </li>
+                            <!-- Item-02 -->
+                            <li class="mb-2">
+                                <span>The data for a single country is written on the line --> I created return methods
+                                    to take in the entire line and return the value that I needed.</span>
+                            </li>
+                            <!-- Item-02 -->
+                            <li class="mb-2">
+                                <span>I needed to make sure that my arraylists stayed parallel when I was sorting
+                                    according to one of the values.</span>
+                            </li>
+                        </ul>
+                        <p>In the first step below, I declared 5 arraylists, the first one being for the entire line of
+                            text per country, and the other 4 for specific data of the country.</p>
                         <div class="mt-4 mb-4">
                             <div class="portfolio-single-item image-border">
-                                <img src="assets/img/Arrays-image1.jpg" class="d-block" alt="...">
+                                <img src="assets/img/sorting-0.5.png" class="d-block" alt="...">
                             </div>
                         </div>
-                        <p>The purpose of this program was to use parallel arrays and compare cats, by different
-                            factors such as colour, breed, affection etc.</p>
-                        <p>In the first step above, I declared and assigned sizes to 5 parallel arrays. This means
-                            that
-                            cat 1 would be at index 0 for all 5 arrays.</p>
+                        <p>Then, I created a method (shown below) that would call all the return method, as well as keep
+                            track of the index of where the program is at in the line of text, for the next method.</p>
                         <div class="mt-4 mb-4">
                             <div class="portfolio-single-item image-border">
-                                <img src="assets/img/Arrays-image2.jpg" class="d-block" alt="...">
+                                <img src="assets/img/sorting-01.png" class="d-block" alt="...">
                             </div>
                         </div>
-                        <p>The intention behind the display best method was for the program to look through and
-                            compare all 5 cats, to find the one with the highest score. I created a maxScore
-                            variable and a currentScore variable, and the if statement would change maxScore to
-                            equal currentScore if it's value was larger.</p>
+                        <p>Here is an example of one of the methods, that would start at the index of the previous
+                            method, and go character by character until it hit a space and a number, which would mean
+                            that it had hit the area of the country.</p>
+                        <div class="mt-4 mb-4">
+                            <div class="portfolio-single-item image-border">
+                                <img src="assets/img/sorting-02.png" class="d-block" alt="...">
+                            </div>
+                        </div>
+                        <p>Finally, here is the sorting method that sorts according to population. I created a for loop
+                            that would go down the array and compare every two subsequent values. However, I also had to
+                            remove the commas from the population strings. Then, I assigned the values of the new index
+                            to a variable, and changed the other indexes of the other three arrays for that country.</p>
+                        <div class="mt-4 mb-4">
+                            <div class="portfolio-single-item image-border">
+                                <img src="assets/img/sorting-03.png" class="d-block" alt="...">
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
